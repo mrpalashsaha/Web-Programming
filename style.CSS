@@ -1,0 +1,39 @@
+ h1 { 
+      clor: blue;
+      text-align: center;
+    }
+   p { color:red;}
+   div {
+   margin : 30px; # outside of the border 
+   padding: 20px; # padding is inside the border 
+   fornt-family: Arial;, sans-serif;
+   fornt-size: 28px;
+   fornt-weight: bold;
+   background-color: teal;
+   width : 100px;
+   height: 400px;
+   }
+   h2 {
+   border: 3px solid blue;
+   }
+   table {
+   border: 2px solid red;
+   border-collapse: collapse;
+   text-alingn: center;
+   }
+   th, td { 
+   boarder:1px solid black;
+   background-color: gray;
+   padding : 5px;
+   weidth: 50% px;
+   }
+   #top {fornt-size: 36px;
+   }
+   #middle { //id 
+   fornt-size :24px
+   }
+   .name { //class name 
+   font-weight: bold;
+   }
+    
+  
