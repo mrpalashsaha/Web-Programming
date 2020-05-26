@@ -4,8 +4,8 @@
     }
    p { color:red;}
    div {
-   margin : 30px; # outside of the border 
-   padding: 20px; # padding is inside the border 
+   margin : 30px; <!--outside of the border--> 
+   padding: 20px; <!--padding is inside the border -->
    fornt-family: Arial;, sans-serif;
    fornt-size: 28px;
    fornt-weight: bold;
@@ -35,5 +35,73 @@
    .name { //class name 
    font-weight: bold;
    }
+<!ol li {
+ color : red;
+}>]
+input [type = text] <!only the input what's type is text>
+{background-color : yellow;
+}
+button {
+ width : 200PX;
+ height : 50px;
+ fornt-size: 24px;
+ background-color : green;
+}
+button:hover {
+ background-color: orange;
+} <! this is called sudo class which is representing the specific state of the html element>
+<! sudo element>
+a::before i want to apply some styling that happen before the content of the actual link if you have a bunch of element that would like to beign with somthing special this particular code will show special symbole and click here with bold before the : { 
+ content : " \21d2 click here : "
+  fornt-weight : bold;
+ 
+    p:: selection <! when something is selected i want that selected things to behave in a particular way {
+     color: red;
+     background-color : yellow;
+ }
+ <responsive design>
+ * viewport 
+ *media Quires:  change the webpage according to action 
+ <style>
+  @media print <create a media query i want to apply css styling in only a particular situation, this styling i only will apply when the webpage is being printed>
+ { .sceen-only <select everything with a particular name>{
+  display: none; make it not visibale. 
+  @media (minwidth: 500px;
+  background-color: red;
+  }
+  @media (max-width: 499px){
+   background-color: blue;
+  }
+  @media (min-width: 500px){
+   h1 :: before{ <before the h1 tag show this>
+   contect: "welcome to my web page";
+  }
+  }
+   @media (max-width: 499px){
+   h1 :: before{ <before the h1 tag when the screen size is 499 px show this>
+    contect: "welcome;}
+  }
+    <meat name = "viewport" content = "width=device-width, intial-scale=1.0"> <adjust the width with the actial device>
+  *flexbox <multiple colum will be rearranged according to page size>
+    .continer {
+     display: flex;
+     flex-wrap: wrap; <get the flex box to wrap arround> 
+    .container > div <any child immidiate to the container>{
+     background-color : springgreen;
+     fornt-size: 20px;
+     margin: 20px;
+     padding: 20px;
+     width: 200px;
+     }
+ *grids 
+     .grid{
+      background-color:green;
+      display:grid;
+      padding:200px;
+      grid-colum-gap:20px;
+      grid-row-gap: 10px;
+      grid-templet-coloums:200px/auto 200px/auto auto; 
+     }
+     
     
   
