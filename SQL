@@ -1,0 +1,124 @@
+Stndard quqary language:
+Data type:
+
+creating a table: 
+intiger
+decimal
+serial(it counts and automatically increase its value)
+varchar ( varibale length of character)
+timestamp
+boolean
+enum (one of a finite number a descreat possible value that might have)
+.........
+ DATA:
+ NOT NULL : 
+ UNIQUE : it will be unique 
+ PRIMARY KEY: IT IS GOING TO BE ID
+ DEFULT
+ CHECK: I want to allow the number what is less than 50 or 100
+ ....
+CREATE TABLE flights (
+ id SERIAL PRIMARY KEY,
+ origin VARCHAR NOT NULL,
+ destinatio VARCHAR NOT NULL,
+ duration INTEGER NOT NULL
+ );
+ ...
+ insert a data inside a datatable:
+ .....
+ INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'London', 415);
+ .....
+  How To check the DATA
+   
+ SELECT * FROM flights; (Select all the data from flights)
+ SELECT origin, destination FROM flights;
+ SELECR * FROM flights WHERE id = 3; (select everyting where the id is 3 )
+ SELECR * FROM flights WHERE origin = 'New York;
+ SELECR * FROM flights WHERE duration > 500;
+ SELECR * FROM flights WHERE destination = 'Paris' AND duration > 500;
+ SELECR * FROM flights WHERE destination = 'Paris' OR duration > 500 ;
+ 
+FUNCTION:  SUM, COUNT, MIN, MAX, AVG.....
+SELECT AVG (duration ) FROM flights;
+SELECT AVG (duration ) FROM flights WHRE origin = 'New york'; 
+SELECT COUNT (* ) FROM flights;
+SELECT COUNT (* ) FROM flights WHERE origin = 'Paris'
+SELECT MIN (duration ) FROM flights;
+(in = in range of possible values;
+SELECT * FROM flights WHERE origin IN ('New York','Lima');
+SELECT * FROM flights WHERE origin LIKE '%a%'; (% is a place holder, it will look all the origin column has s on it)
+........
+ UPDATE
+ 
+ UPDATE flights 
+ SET duration = 430;
+ WHERE origin = 'New York'
+ AND destination = 'London'; (update theh duration table only the column where origin and duration is new york and london)
+ ..........
+ DELETE
+ 
+ DELETE FROM flights WHERE destination = 'Tokyo';
+ .....
+ (ASC = Assending shortest, DSC = descending longest one)
+ SELECT * FROM flights LIMIT 2;
+ SELECT * FROM flights ORDER BY duration ASC; 
+ SELECT * FROM flights ORDER BY duration ASC LIMIT 3; (Will give data of shortest duration of 3)
+ SELECT * FROM flights ORDER BY duration DSC LIMIT 3;(Will give data of longest duration of 3)
+SELECT COUNT (* ) FROM flights GOUP BY origin; (take all the rows and put them in group based on their origin and count them how many are they on each individual origin)
+SELECT origin,  COUNT (*) FROM flights GROUP BY origin HAVING COUNT (*)>1; (Selecting origin, how many flights are from that location, form my flights table groupong them by origin and i only want have origin that have count greater than 1)
+.....
+foreign keys ( referencing  the key from different table or a method to connect multiple table together)
+
+CREATE TABLE passenger (
+id SSERIAL PRIMARY KEY,
+name VARCHAR NOT NULL.
+flight_id INTEGER REFERENCES flights (linking two table together)
+);
+INSEERT INTO passenger ( name, flight_id) VALUES ('PALASH', 1);
+INSEERT INTO passenger ( name, flight_id) VALUES ('ANU', 1);
+INSEERT INTO passenger ( name, flight_id) VALUES ('UZZAL', 2);
+INSEERT INTO passenger ( name, flight_id) VALUES ('NIRU', 4);
+.....
+SELECT * FROM passenger WHERE name = 'Niru';
+SELECT * FROM flights WHERE is = 1;
+....
+join : two diffferent table that are related in some way and group them in one when you select them.
+ join or inner join, left outer join, right outer join and full outer join........
+ 
+INNER JOIN:
+
+SELECT origin, destinsstion, name FROM flights JOIN passenger ON passenger.flight_id = flights.id; (selecting the origin, destination and name from the passenger table and joining them together by relation of passenger id from flights table and match with fights id)
+SELECT origin, destinsstion, name FROM flights JOIN passenger ON passenger.flight_id = flights.id WHERE name = 'PALASH';(It will provide the info about origin and destination of only PALASH)
+..........
+LEFT JOIN: ( It is going to take the table from the left and its going to make sure that all the left tables are included in the final result even they dont have a match)
+
+SELECT origin, destinsstion, name FROM flights LEFT JOIN passenger ON passenger.flight_id = flights.id;
+....
+
+CREATE INDEX:  easy way to quickley referencing something.
+
+Nested Quary: 
+
+SELECT flight_id FROM passenger GROUP BY flight_id HAVING COUNT (*) > 1; (GROUP them based on their flight id and count whose id id greater than 1)
+SELECT * FROM flights WHERE id IN (SELECT flight_id FROM passenger GROUP BY Flight_id HAVING COUNT(*) > 1); ( select  all from flight where id in the flight is result of this quary) 
+/get me all the passenger id that have multiple passenger
+
+Password setup:
+
+SELECT * FROM users WHERE (username = username) and (password = password);
+
+Race conditions: 
+
+SELECT balance FROM bank WHERE user_id = 1 (check the balace how much the particular person have)
+UPDATE bank SET balance = balance - 100 WHERE user_id = 1; (reduce the balance by 100)
+ if two person do the same thing at the same time then the bank balance can go to negetive to avoid this situation bank use the transaction lock.
+ BEGIN 
+ COMMIT
+ 
+ SQLAlchemy: allow python code to run in SQL.
+ 
+ 
+ 
+ 
+ 
+ 
