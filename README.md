@@ -1,1 +1,1 @@
-# lecture1
+# Web Programming with python and Javascript
