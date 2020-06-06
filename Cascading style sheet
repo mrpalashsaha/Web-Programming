@@ -1,0 +1,18 @@
+There are three ways to add css which are inline (directly to html, internal (using style tag with in a single document and external is linking an extarnal .css file
+
+sselector { property and vlaue; }
+
+there are few ways toa add the color in css, directly mentioning the name of the color like red, green blue or in hexadecimle velue or RGB (red green and blue format)
+for rxmple p{ color : rgb (0, 0, 255)
+
+Class and ID : iD is a unique  onlye one content holds one ID but different things can be in a same class
+
+padding is difference between the content and border and margin is the outside of the boarder. margin can be top bottom left and right
+for exapmle margin: top bottom right left, 5px10px5px10px
+
+positioning: static is deflt value if you dont sign anything it takes ststic value by default in order of document follow, 
+relative means thats the element is poditioning in relative to its normal positioning.
+absolute will allow us to target about whereever inside of our relative positioning.
+fixed  is fixed position to the browser does not matter whatever the size of the windows. it always will be in the same position.
+initial is sets the property to its default value.
+inherit will inherit whatever property the parent element have. 
