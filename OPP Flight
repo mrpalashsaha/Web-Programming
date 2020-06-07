@@ -1,0 +1,143 @@
+class flight; 
+def __init__ (self, origin, destination, duration ):
+  self.origin = origin
+  self.destination = destination 
+  self.duration = duration //telli python to take the data as input and create a veriable and save those data in that variable.
+  
+  def main ():
+  
+  # create flight 
+  f = Flight ( origin = " New York", destination = "Paris", duration = 5400 # first we ue the class name and specify the data .f is a variable of type flight.
+  
+  
+  # change the value of a variable.
+  
+  f.duration += 10 / aa same f.duration = f.duration +10. 
+  
+  #print details about flight.
+  
+  print (f.origin)
+  print (f.destination)
+  print(f.duration_
+  
+  if __name__ == "__main__": #i want to run this particular file if i run this file directly but not if imported somewherelse.
+  main()
+  
+  
+  def print_info(Self):
+    print (f"Flight origin : {self.origin}")
+    print ( f" Flight destination : { self.destination}")
+    print (f"Flight duration : {self.duration}")
+    
+   def main()
+   
+   f1 = f = Flight ( origin = " New York", destination = "Paris", duration = 540)
+   f1.print_info()
+   
+   f2 = Flight ( origin = " Tokyo", destination = "Dhaka", duration = 1200)
+   
+    __name__ == "__main__":
+  main()
+  
+  
+  ###########
+  Class FLight:
+  
+  def __init__ (self, origin, destination, duration ):
+  self.origin = origin
+  self.destination = destination 
+  self.duration = duration
+  
+   def print_info(Self):
+    print (f"Flight origin : {self.origin}")
+    print ( f" Flight destination : { self.destination}")
+    print (f"Flight duration : {self.duration}")
+    
+    def delay (Self, amount):  // the flight i have created is self and delayed by the amount of time. 
+      self.duration += amount ## take whatever duration was previously and add the amount on it. 
+      
+      
+   def main()
+   
+   f1 = f = Flight ( origin = " New York", destination = "Paris", duration = 540)
+   f1.delay(10)
+   f1.print_info()
+   
+   f2 = Flight ( origin = " Tokyo", destination = "Dhaka", duration = 1200)
+   
+    __name__ == "__main__":
+  main()
+  
+  
+  #### 
+  class Flight:
+  
+   counter = 1 
+   
+   def __init__ (self, origin, destination, duration):
+   
+   # keep track of id number.
+   
+   self.id = Flight.counter
+   Flight.counter += 1 
+   
+   # keep track of passenger.
+   self.passenger = []
+   
+   # details aabout flight.
+   
+   slf.origin = origin
+   self.destination = destination 
+   self.duration = duration
+   
+   def print_info(Self):
+    print (f"Flight origin : {self.origin}")
+    print ( f" Flight destination : { self.destination}")
+    print (f"Flight duration : {self.duration}")
+    
+    print()
+    print ("Passenger")
+      for passenger in self.passenger 
+      print(f" {passenger.name}")
+      
+  def delay (Self, amount):  . 
+      self.duration += amount 
+      
+    def add_passenger (self, p):
+      self.passenger.append (p)  // self.passenger was an empty list and update it with p
+      p.flight_id = self.id
+    
+    
+   class Passenger:
+   
+    def __init__ (self, name):
+      self.name = name
+    
+      
+   def main()
+   
+   # crete flight.. 
+   
+   f1 = f = Flight ( origin = " New York", destination = "Paris", duration = 540)
+   
+   ## create passenger..
+   
+   alice = Passenger (name = "Alice")
+   bob = Passneger (name = bob)
+   
+   # add passenger .
+   
+   f1.add_passenger (alice)
+   f1.add_passenger (bob)
+   f1.print_info()
+   
+   __name__ == "__main__":
+  main()
+  
+   
+   
+   
+   
+   
+   
+  
