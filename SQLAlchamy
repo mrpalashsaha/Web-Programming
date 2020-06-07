@@ -1,0 +1,44 @@
+flight = FLight (origin = "New Yourk", destination  "Paris", duration = 540 )
+db.session.add(flight)
+
+//slect * FROM flights; 
+
+FLight.query.all()
+
+Flight.query.filter_by(origin = "Paris"). all() // it will querry about the origin Paris form all the avilable flight.
+Flight.query.filter_by(origin = "Paris").first ()
+Flight.query.filter_by(origin = "Paris").count()
+Flight.query.filter_by(ID = 28).firsts() get me the flight which id is 28. 
+flight.quaery.get (28)  // same as before// 
+
+update flilght 
+flilght = Flight.query.get(6)
+flight.duration = 280 // update the duratuin item where id is 6
+
+flight = FLight.query.get(28)
+db.session.delete(fliglht) // delete the item
+
+when you are done with the changes 
+
+db.seesion.commit()
+
+Flight.query.order_by(Flight,origin).all() // order our flight in a particular wayquary from the flight table put them in a paticular order, sort
+them by the origincolum and get me back all the result
+
+Flight.query.order_by(Flight,origin.dec()).all()  // get the list in reveresive order. 
+
+Flight.query.filter(Flight.origin != "Paris").all() // query from the flight table which is origin is not paris.
+
+Flight.query.filter(Flight.origin.like(%a%)).all() // get the origin which has alphabet a. 
+Flight.query.filter(Flight.origin.in_ ([ "Tokyo" "Paris"])).all() // query from the list in thiwsw possible origin
+
+Flight.query.filter( and_Flight.origin.in == "Paris",  flight.duration >500)).all() // boolean value both has to be true
+
+Flight.query.filter( or_Flight.origin.in == "Paris",  flight.duration >500)).all()
+
+db.session.query (Flight, passenger).filter (Flight.id == Passenger.flight_id).all() // query from the flight table and the passenger table
+and we going to filter it flight id needs to equal to paasenger flight id and we are gonna selecet everything from there.
+
+
+
+
