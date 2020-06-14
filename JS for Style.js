@@ -29,7 +29,105 @@ document.querySelectorAll('.color-change').foreach (function(button)) {     // s
     </body>
     
     <html>
+      
+     #########
+    <script>
+    document.addEventListener (DOMContentLoaded', () =>{
+      document.querySelectorAll('#color-change').onchange function() {     // on i change my selecction on drop down value then run the funtion 
+                                                                           // change the hello color to be this refer to what ever value this funtion is operated on
+                                                                            // on function will keep the scop of this through the whole function 
+       document.querySelector('#hello').style.color = this.value;
+    }
+});
+      </script>
     
+    <body>
+      <h1 id = "hello"> <h1>
+        <select id = "color-chage">
+          <option value = "black"> Black </option>
+          <option value = "red"> Red </option>
+          <option value = "blue"> Blue </option>
+          <option value = "green"> Green </option>
+    </select>
+</body>
+ 
+
+
+#######
+
+ <script>
+   document.querySelector('#new-Task'').onsubmit = () => {     
+       // create new intem for list 
+const li = documenet.createElement (;li)
+li.innerHTML = document.querySelector('#task').value ;
+// add new item to the tassk list 
+document.querySelector('#task').append(li);
+
+//clear input field 
+document.querySelector('#task').value = '';
+
+//stop form from submitting
+return false; 
+    };
+});
+      </script>
+
+<ul id = "task" > 
+  </ul>
+<form id = "neew- Task>
+<input is = "task" autocomplete = "off" autofocus placeholder = "New Task" tyoe = "text">
+  <input type = "submit"
+</form>
+#######################################################
+<script>
+     document.addEventListener (DOMContentLoaded', () =>{
+                                //setinterval takes two argument it will increment the count in every 1000 milisecond
+                                setInterval (count, 1000) 
+});
+
+let counter = 0;
+function count () { 
+  counter ++;
+  document.querySelector ('#counter').innerHTML = counter;
+}
+</script>
+   
     
-    
-    
+############eo 
+  <script >
+    if (!localStorage.getItem ('counter'))
+        localStorage.setItem('ceoounter', 0);
+
+// load current value of the counter 
+
+document.addEvent Listener ('DOMContentLoaded', (0 +. { 
+   document.querySelector ('#counter').innerHTML = localStorage.getItem('counter')
+                            
+                            //count every time button is clicked 
+   
+   document.querySelector ('button').onclick = () => {
+  //increment current cunter 
+  let counter = loclStorage.getItem ('conuter');
+   counter ++;
+                                     
+                                     //update counter 
+  
+  document.querySelector ('#counter').innerHTML = localStorage.                                
+  loclStorage.getItem ('conuter' counter );
+}
+});
+                                     
+                                     
+                                     
+                            
+                            
+                            
+                            
+                            
+
+
+
+
+
+
+
